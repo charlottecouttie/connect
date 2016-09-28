@@ -16,7 +16,6 @@ $icon-font-path: '../fonts/';
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
   padding-bottom: 20px;
 }
 
@@ -95,230 +94,63 @@ body {
   }
 }
 
-ul {
+#wrap{
+    width: 100%;
+    height: 4em;
+    background-color: #000;
+    border: 1px solid white;
 }
 
+.wrap-leader {
     #lim {
-  	padding: 2em;
-  	background: yellow;
-    margin-top: 2em;
-    margin-left: 11em;
-    top: 30%;
-    bottom: 50%;
-    position: fixed;
-    z-index: 999;
+      padding: 0.5em;
+      width: 22%;
+      height: 4em;
+      background-color: pink;
+      float: left;
+      margin: 0.5em;
+    }
+}
+.wrap-subleader {
+  margin-top: 8em;
+  #lim1 {
+    padding: 0.5em;
+    width: 26%;
+    height: 4em;
+    float: left;
+    background-color: yellow;
+    margin: 0.5em;
   }
-
-
-#lim1 {
-	padding: 2em;
-	background: blue;
-  margin: 2em;
 }
 
-#lim2 {
-	padding: 2em;
-	background: pink;
-  margin: 2em;
+.wrap-div {
+  margin-top: 13em;
+      #lim3 {
+        padding: 0.5em;
+        width: 22%;
+        height: 4em;
+        background-color: blue;
+        float: left;
+        margin: 0.5em;
+      }
 }
 
-#lim3 {
-	padding: 2em;
-	background: black;
-  margin: 5em;
+.wrap-subdiv {
+  margin-top: 8em;
+    #lim4 {
+      padding: 0.5em;
+      width: 22%;
+      height: 4em;
+      background-color: grey;
+      float: left;
+      margin: 0.5em;
+    }
 }
+#imagelightbox
+{
+    position: fixed;
+    z-index: 9999;
 
-
-//TREE
-
-.tree {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  -webkit-transform-origin: 50%;
-          transform-origin: 50%;
-}
-
-.tree ul {
-  position: relative;
-  padding: 1em 0;
-  white-space: nowrap;
-  margin: 0 auto;
-  text-align: center;
-}
-.tree ul::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.tree li {
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-  list-style-type: none;
-  position: relative;
-  padding: 1em .5em 0 .5em;
-}
-.tree li::before, .tree li::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 50%;
-  border-top: 1px solid #ccc;
-  width: 50%;
-  height: 1em;
-}
-.tree li::after {
-  right: auto;
-  left: 50%;
-  border-left: 1px solid #ccc;
-}
-.tree li:only-child::after, .tree li:only-child::before {
-  display: none;
-}
-.tree li:only-child {
-  padding-top: 0;
-}
-.tree li:first-child::before, .tree li:last-child::after {
-  border: 0 none;
-}
-.tree li:last-child::before {
-  border-right: 1px solid #ccc;
-  border-radius: 0 5px 0 0;
-}
-.tree li:first-child::after {
-  border-radius: 5px 0 0 0;
-}
-
-.tree ul ul::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  border-left: 1px solid #ccc;
-  width: 0;
-  height: 1em;
-}
-
-.tree li a {
-  border: 1px solid #ccc;
-  padding: .5em .75em;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 5px;
-  color: #333;
-  position: relative;
-  top: 1px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.tree li a:hover,
-.tree li a:hover + ul li a {
-  background: #e9453f;
-  color: #fff;
-  border: 1px solid #e9453f;
-}
-
-.tree li a:hover + ul li::after,
-.tree li a:hover + ul li::before,
-.tree li a:hover + ul::before,
-.tree li a:hover + ul ul::before {
-  border-color: #e9453f;
-}
-
-// LIGHTBOX
-
-a.lightbox img {
-  height: 150px;
-  border: 3px solid white;
-  box-shadow: 0px 0px 8px rgba(0,0,0,.3);
-  margin: 94px 20px 20px 20px;
-}
-
-/* Styles the lightbox, removes it from sight and adds the fade-in transition */
-
-.lightbox-target {
-  position: fixed;
-  top: -100%;
-  width: 100%;
-  background: rgba(0,0,0,.7);
-  width: 100%;
-  opacity: 0;
-  -webkit-transition: opacity .5s ease-in-out;
-  -moz-transition: opacity .5s ease-in-out;
-  transition: opacity .5s ease-in-out;
-  overflow: hidden;
-}
-
-/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
-
-.lightbox-target img {
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left:0;
-  right:0;
-  bottom: 0;
-  max-height: 0%;
-  max-width: 0%;
-  border: 3px solid white;
-  box-shadow: 0px 0px 8px rgba(0,0,0,.3);
-  box-sizing: border-box;
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-}
-
-/* Styles the close link, adds the slide down transition */
-
-a.lightbox-close {
-  display: block;
-  width:50px;
-  height:50px;
-  box-sizing: border-box;
-  background: white;
-  color: black;
-  text-decoration: none;
-  position: absolute;
-  top: -80px;
-  right: 0;
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-}
-
-
-
-/* Provides part of the "X" to eliminate an image from the close link */
-
-a.lightbox-close:after {
-  content: "";
-  display: block;
-  height: 30px;
-  width: 1px;
-  background: black;
-  position: absolute;
-  left: 26px;
-  top:10px;
-  -webkit-transform:rotate(-45deg);
-  -moz-transform:rotate(-45deg);
-  transform:rotate(-45deg);
-}
-
-/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
-
-.lightbox-target:target {
-  opacity: 1;
-  top: 0;
-  bottom: 0;
-}
-
-.lightbox-target:target img {
-  max-height: 80%;
-  max-width: 100%;
-}
-
-.lightbox-target:target a.lightbox-close {
-  top: 0px;
+    -ms-touch-action: none;
+    touch-action: none;
 }

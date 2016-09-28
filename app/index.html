@@ -15,10 +15,14 @@
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="jquery.lightbox.css" />
+
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="jquery.js"></script>
+    <script src="jquery.lightbox.min.js"></script>
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
@@ -27,50 +31,53 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="container">
-      <div class="jumbotron">
-        <h1>Operation Ghost</h1>
-        <ul>
-        <p><a class="lightbox" href="#">Hui Zhang</a></p>
-      </ul>
-      </div>
-<div class="tree">
-  <ul>
-    <li>
-      <a id="lim" href="#">Zhang</a>
-  </ul>
-  </li>
-  <ul>
-    <li>
-      <a id="lim1" href="#">Xuiofeng Xue</a>
-    </ul>
-  </li>
-  <ul>
-  <li>
-    <a id="lim2" href="#">Zhi Feng Wu</a>
-  </ul>
-  </li>
-  <ul>
-  <li>
-    <a id="lim2" href="#">Suppressed</a>
-  </ul>
-  </li>
-  <ul>
-  <li>
-    <a id="lim2" href="#">Lulu Zhang</a>
-  </ul>
-  </li>
-  <!-- <ul>
-<li>
-    <a id="lim3" class="lightbox" href="Zhang">Felix</a>
-  </ul>
-</li> -->
+    <div class="container-fluid">
 
-<div class="lightbox-target" id="Zhang">
-   <img src="http://s3.newsapps.nz.s3.amazonaws.com/nzh_graphics/2016/April/SEPTEMBER/EDITORS/tower.jpg" width="100%" height="80%"/>
-   <a class="lightbox-close" href="#"></a>
+
+  <div class="wrap-leader">
+    <h2 class=".table align-left">Leader</h2>
+      <a id="lim" href="#">Hui Zhang</a>
+    </div>
+
+<div class="wrap-subleader">
+  <h2 class=".table align-left">Leader two</h2>
+<ul>
+    <a id="lim1" href="#">Xuiofeng Xue</a>
+</ul>
+<ul>
+    <a id="lim1" href="#">Zhi Feng Wu</a>
+</ul>
+<ul>
+    <a id="lim1" href="#">Suppressed</a>
+</ul>
+<ul>
+    <a id="lim1" href="#">Lulu Zhang</a>
+</ul>
+<ul>
+    <a id="lim1" href="#">Lulu Zhang</a>
+  </ul>
 </div>
+
+<div class="wrap-div">
+  <h2 class=".table align-left">Leader three</h2>
+  <ul>
+      <a id="lim3" href="#">Lulu Zhang</a>
+    </ul>
+    <ul>
+        <a id="lim3" href="#">Lulu Zhang</a>
+      </ul>
 </div>
+
+<div class="wrap-subdiv">
+  <h2 class=".table align-left">Leader four</h2>
+  <ul>
+      <a id="lim4" href="#">Lulu Zhang</a>
+    </ul>
+    <ul>
+        <a id="lim4" href="#">Lulu Zhang</a>
+      </ul>
+</div>
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
