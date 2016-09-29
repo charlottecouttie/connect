@@ -15,8 +15,6 @@
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="jquery.lightbox.css" />
-
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
@@ -71,13 +69,48 @@
 <div class="wrap-subdiv">
   <h2 class=".table align-left">Leader four</h2>
   <ul>
-      <a id="lim4" href="#">Lulu Zhang</a>
+
+      <a class="btn btn-primary" id="unique-btn" href="http://s3.newsapps.nz.s3.amazonaws.com/nzh_graphics/2016/April/SEPTEMBER/EDITORS/tower.jpg">Lulu Zhang</a>
     </ul>
     <ul>
         <a id="lim4" href="#">Lulu Zhang</a>
       </ul>
-</div>
+ </div>
 
+
+ <label id="lim4" for="lightbox-1">Launch Lightbox</label>
+
+ <aside class="lightbox">
+   <input type="checkbox" class="state" id="lightbox-1" />
+   <article class="content">
+     <header class="header">
+       <h3 class="h h3">Lorem Ipsum</h3>
+       <label class="button" for="lightbox-1">&times;</label>
+     </header>
+     <main class="main">
+       <p>
+ sea takimata sanctus est Lorem ipsum dolor sit amet.
+       </p>
+     </main>
+     <footer class="footer">
+       <button class="button" type="button">Do something</button>
+       <label class="button" for="lightbox-1">Close</label>
+     </footer>
+   </article>
+   <label class="backdrop" for="lightbox-1"></label>
+ </aside>
+
+
+<!-- <a id="lim4"><a href="#" data-src-full="http://s3.newsapps.nz.s3.amazonaws.com/nzh_graphics/2016/April/SEPTEMBER/EDITORS/tower.jpg">
+
+
+  <div class="lightbox" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="lightbox-loader"></div>
+<div class="lightbox-content"></div>
+<button class="lightbox-previous">&#8249;</button>
+<button class="lightbox-next">&#8250;</button>
+</div>
+</div> -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
