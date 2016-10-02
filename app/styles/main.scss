@@ -41,6 +41,7 @@ body {
   }
 }
 
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
@@ -107,7 +108,7 @@ body {
       padding: 0.5em;
       width: 22%;
       height: 4em;
-      background-color: pink;
+      background-color: white;
       float: left;
       margin: 0.5em;
     }
@@ -119,7 +120,7 @@ body {
     width: 26%;
     height: 4em;
     float: left;
-    background-color: yellow;
+    background-color: white;
     margin: 0.5em;
   }
 }
@@ -130,7 +131,7 @@ body {
         padding: 0.5em;
         width: 22%;
         height: 4em;
-        background-color: blue;
+        background-color: white;
         float: left;
         margin: 0.5em;
       }
@@ -142,19 +143,15 @@ body {
       padding: 0.5em;
       width: 22%;
       height: 4em;
-      background-color: grey;
+      background-color: white;
       float: left;
       margin: 0.5em;
     }
+    a:hover {
+      background-color: black;
+    }
 }
 
-a:link {
-  color:green;
-}
-
-a:visited {
-  color:pink;
-}
 
 a:hover {
   color: black;
@@ -166,13 +163,90 @@ a:active {
 .button-click {
   padding: 0.5em;
   width: 40%;
-  height: 20%;
+  height: 40%;
   font-size: 10em;
-  margin: 0.5em;
+  margin-top: 5em;
   position: absolute;
   top:20%;
-  display: center;
   text-align: center;
+}
+/**
+ * Demo Styles
+ */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 64px auto;
+  max-width: 640px;
+  width: 94%;
+  text-align: center;
+}
+
+/**
+ * Circle Styles
+ */
+
+// .circle {
+//   position: relative;
+//   display: block;
+//   margin: 2em 0;
+//   text-align: center;
+// }
+//
+// .circle:after {
+//   display: block;
+//   padding-bottom: 100%;
+//   width: 100%;
+//   height: 0;
+//   border-radius: 50%;
+//   background-color: #ddd;
+//   content: "";
+// }
+
+.circle__inner {
+  position: absolute;
+  top: 20em;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 8em;
+}
+
+
+
+// .circle__content {
+//   top:50%;
+//   bottom: 20%;
+//   // display: table-cell;
+//   // padding: 5em;
+//   // vertical-align: middle;
+// }
+
+@media (min-width: 480px) {
+  .circle__content {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 768px) {
+  .circle__content {
+    font-size: 4em;
+  }
 }
 
 
@@ -197,18 +271,18 @@ img {
 }
 .button{
   padding: 0.5em;
-  width: 22%;
-  height: 4em;
+  width: 10%;
+  height: 3em;
   float: left;
-  margin: 0.5em;
-  background: blue;
+  /* background: blue; */
   border: none;
-  color: #fff;
+  color: black;
   text-align: center;
-  font-size: 14px;
+  font-size: 2em;
+  -webkit-transition: .3s all ease-in-out;
   transition: .3s all ease-in-out;
   &:hover{
-    box-shadow: inset 0 -2.5px rgba(0,0,0,.4);
+    color: grey;
   }
 }
 .hero{
@@ -242,21 +316,21 @@ img {
   left: 0;
   height: 0;
   padding: 0 20px;
-  .content{
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    position: relative;
-    z-index: 2;
-    max-width: 500px;
-    max-height: 95vh;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    transform: translateY(-200%);
-    transition: .3s transform ease-in-out;
-    border: 1px solid rgba(0,0,0,.1);
-  }
+    .content{
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+      max-width: 500px;
+      max-height: 95vh;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      transform: translateY(-200%);
+      transition: .3s transform ease-in-out;
+      border: 1px solid rgba(0,0,0,.1);
+    }
   .header,
   .footer{
     display: flex;
