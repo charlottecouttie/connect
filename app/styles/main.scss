@@ -115,11 +115,11 @@ body {
 
 .wrap-leader {
     #lim {
-      text-color: rgb(255, 255, 255);
+      text-color: rgb(55, 255, 255);
       padding: 0.5em;
       width: 25%;
       height: 4em;
-      background-color: rgb(47, 48, 48);
+      background-color: rgb(147, 48, 48);
       float: left;
       margin: 0.5em;
     }
@@ -292,6 +292,7 @@ a.button:hover {
 	height: 55px;
 	width: 100px;
   text-decoration: none;
+  border: 0;
 
 	// background: #34696f;
 	// border: 2px solid rgba(33, 68, 72, 0.59);
@@ -306,12 +307,16 @@ a.button:hover {
 	// -moz-border-radius: 20px;
 	// border-radius: 20px;
 
-	-webkit-box-shadow: 0 3px 0 #1b383b;
-	-moz-box-shadow: 0 3px 0 #1b383b;
-	box-shadow: 0 3px 0 #1b383b;
+	// -webkit-box-shadow: 0 3px 0 #1b383b;
+	// -moz-box-shadow: 0 3px 0 #1b383b;
+	// box-shadow: 0 3px 0 #1b383b;
 
 	// text-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
 
+}
+
+.button-back:active {
+  border:0;
 }
 
 /*Step 3: Link Styles*/
@@ -380,6 +385,7 @@ a.button:hover {
   left: 0;
   height: 0;
   padding: 0 20px;
+
     .content{
       display: flex;
       flex-direction: column;
@@ -400,6 +406,7 @@ a.button:hover {
     display: flex;
     flex-shrink: 0;
     align-items: center;
+
     .h{
       margin: 0;
     }
@@ -408,10 +415,7 @@ a.button:hover {
     }
   }
   .header{
-    padding-bottom: 10px;
-  }
-  .footer{
-    padding-top: 20px;
+    padding-bottom: 0px;
   }
   .main{
     flex-grow: 1;
