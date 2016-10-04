@@ -17,7 +17,7 @@ $icon-font-path: '../fonts/';
 /* Space out content a bit */
 body {
   padding-bottom: 20px;
-  background-color: #696969;
+  // background-color: #696969;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -96,6 +96,16 @@ body {
   }
 }
 
+.front {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  bottom: 40%;
+}
+
 #wrap{
     width: 100%;
     height: 4em;
@@ -105,33 +115,38 @@ body {
 
 .wrap-leader {
     #lim {
+      text-color: rgb(255, 255, 255);
       padding: 0.5em;
-      width: 22%;
+      width: 25%;
       height: 4em;
-      background-color: white;
+      background-color: rgb(47, 48, 48);
       float: left;
       margin: 0.5em;
     }
+    button.hover {
+      background: white;
+    }
+
 }
 .wrap-subleader {
   margin-top: 8em;
   #lim1 {
     padding: 0.5em;
-    width: 26%;
+    width: 35%;
     height: 4em;
     float: left;
-    background-color: white;
+    background-color: rgb(73, 73, 73);
     margin: 0.5em;
   }
 }
 
 .wrap-div {
-  margin-top: 13em;
+  margin-top: 18em;
       #lim3 {
         padding: 0.5em;
-        width: 22%;
+        width: 25%;
         height: 4em;
-        background-color: white;
+        background-color: rgb(103, 103, 104);
         float: left;
         margin: 0.5em;
       }
@@ -141,23 +156,27 @@ body {
   margin-top: 8em;
     #lim4 {
       padding: 0.5em;
-      width: 22%;
+      width: 25%;
       height: 4em;
-      background-color: white;
+      background-color: rgb(133, 134, 135);
       float: left;
       margin: 0.5em;
     }
-    a:hover {
-      background-color: black;
+    button:hover {
+      background-color: white;
     }
 }
 
+.wrap-back {
+  margin-top: 10em;
+    #lim5 {
+      width: 25%;
+      height: 4em;
 
-a:hover {
-  color: black;
-}
-a:active {
-  color:grey;
+    }
+    button:hover {
+      background-color: white;
+    }
 }
 
 .button-click {
@@ -169,6 +188,7 @@ a:active {
   position: absolute;
   top:20%;
   text-align: center;
+  text-decoration: none;
 }
 /**
  * Demo Styles
@@ -195,59 +215,16 @@ body {
   text-align: center;
 }
 
-/**
- * Circle Styles
- */
+//MEDIA QUERIES
 
-// .circle {
-//   position: relative;
-//   display: block;
-//   margin: 2em 0;
-//   text-align: center;
+//
+// @media (min-width: 480px) {
+//
 // }
 //
-// .circle:after {
-//   display: block;
-//   padding-bottom: 100%;
-//   width: 100%;
-//   height: 0;
-//   border-radius: 50%;
-//   background-color: #ddd;
-//   content: "";
+// @media (min-width: 768px) {
+//
 // }
-
-.circle__inner {
-  position: absolute;
-  top: 20em;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  padding: 8em;
-}
-
-
-
-// .circle__content {
-//   top:50%;
-//   bottom: 20%;
-//   // display: table-cell;
-//   // padding: 5em;
-//   // vertical-align: middle;
-// }
-
-@media (min-width: 480px) {
-  .circle__content {
-    font-size: 2em;
-  }
-}
-
-@media (min-width: 768px) {
-  .circle__content {
-    font-size: 4em;
-  }
-}
 
 
 //lightbox
@@ -260,31 +237,117 @@ body{
   font-size: 15px;
   margin: 0;
   padding: 0;
-  background: grey;
 }
 img {
   width: 80%;
   height:80%;
 }
-.h{
+.h {
   margin-top: 0;
 }
+
 .button{
+	/*Step 2: Basic Button Styles*/
+	display: block;
+	height: 100px;
+	width: 300px;
+  text-decoration: none;
+
+	/*Step 3: Text Styles*/
+	color: rgba(0, 0, 0, 0.55);
+	text-align: center;
+	font: bold 3.2em/100px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+
+	-webkit-border-radius: 50px;
+	-khtml-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+
+	-webkit-box-shadow: 0 8px 0 #1b383b;
+	-moz-box-shadow: 0 8px 0 #1b383b;
+	box-shadow: 0 8px 0 #1b383b;
+
+	// text-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
+}
+
+/*Step 3: Link Styles*/
+a.button2 {
+	text-decoration: none;
+}
+
+/*Step 5: Hover Styles*/
+a.button:hover {
+	// background: #3d7a80;
+  text-decoration: none;
+
+	// background: -webkit-linear-gradient(top, #96989b, #7c7d7f);
+	// background: -moz-linear-gradient(top, #96989b, #7c7d7f);
+	// background: -o-linear-gradient(top, #96989b, #7c7d7f);
+	// background: -ms-linear-gradient(top, #96989b, #7c7d7f);
+	// background: linear-gradient(top, #96989b, #7c7d7f);
+}
+
+.button-back {
+  display: inline-table;
+	height: 55px;
+	width: 100px;
+  text-decoration: none;
+
+	// background: #34696f;
+	// border: 2px solid rgba(33, 68, 72, 0.59);
+
+	/*Step 3: Text Styles*/
+	color: rgba(0, 0, 0, 0.55);
+	text-align: center;
+	font: bold 1.2em/80px "Helvetica Neue", sans-serif;
+
+	// -webkit-border-radius: 20px;
+	// -khtml-border-radius: 20px;
+	// -moz-border-radius: 20px;
+	// border-radius: 20px;
+
+	-webkit-box-shadow: 0 3px 0 #1b383b;
+	-moz-box-shadow: 0 3px 0 #1b383b;
+	box-shadow: 0 3px 0 #1b383b;
+
+	// text-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
+
+}
+
+/*Step 3: Link Styles*/
+a.button2 {
+	text-decoration: none;
+}
+
+/*Step 5: Hover Styles*/
+a.button:hover {
+  text-decoration: none;
+
+	// background: #3d7a80;
+	background: -webkit-linear-gradient(top, #96989b, #7c7d7f);
+	background: -moz-linear-gradient(top, #96989b, #7c7d7f);
+	background: -o-linear-gradient(top, #96989b, #7c7d7f);
+	background: -ms-linear-gradient(top, #96989b, #7c7d7f);
+	background: linear-gradient(top, #96989b, #7c7d7f);
+
+}
+
+.button-three {
   padding: 0.5em;
   width: 10%;
   height: 3em;
   float: left;
-  /* background: blue; */
+  margin-left: 1em;
+  // /* background: blue; */
   border: none;
   color: black;
   text-align: center;
   font-size: 2em;
-  -webkit-transition: .3s all ease-in-out;
-  transition: .3s all ease-in-out;
-  &:hover{
-    color: grey;
-  }
+    button:hover{
+      color: rgb(229, 230, 232);
+    }
 }
+
 .hero{
   position: absolute;
   top: 50%;
@@ -309,6 +372,7 @@ img {
     }
   }
 }
+
 .lightbox{
   position: fixed;
   top: 0;
