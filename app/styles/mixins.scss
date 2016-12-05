@@ -29,6 +29,22 @@
   animation-fill-mode: forwards;
 }
 
+
+@mixin background($imgpath,$size:cover,$position:center,$repeat: no-repeat) {
+    background: {
+      image: url($imgpath);
+      size: $size;
+      position: $position;
+      repeat: $repeat;
+    }
+}
+
+
+@mixin full-screen{
+  width:100%;
+  height:100vh;
+}
+
 @mixin keyframes($name) {
   @-webkit-keyframes $name {
     @content;
