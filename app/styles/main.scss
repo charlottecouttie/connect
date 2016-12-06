@@ -176,7 +176,7 @@ a:hover {
 
 .content-container {
   background-color: #fff;
-  width: 100vh;
+  width: 95%;
 }
 
 .clearfix  {
@@ -190,7 +190,7 @@ a:hover {
 
 #image-one {
     position: relative;
-    width: 30%;
+    width: 35%;
     height: 20em;
     overflow: hidden;
     background: #aac9e2;
@@ -200,8 +200,9 @@ a:hover {
 
 #image-two {
   position: relative;
-  width: 50%;
+  width: 35%;
   height: 20em;
+  float: right;
 
         @include tablet {
 
@@ -209,11 +210,11 @@ a:hover {
 
         @include desktop {
           position: relative;
-          width: 30%;
+          width: 35%;
           height: 20em;
           overflow: hidden;
           background: #6ba1ce;
-          margin: 0em 5em 2.5em 5em;
+          margin: 5em 2.5em 2.5em 0em;
         }
 }
 
@@ -223,7 +224,7 @@ a:hover {
     height: 20em;
     background: black;
     margin: 0em 5em 2.5em 5em;
-    float: right;
+    float: left;
 
 }
 
