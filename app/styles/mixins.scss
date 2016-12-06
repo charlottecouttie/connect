@@ -58,7 +58,7 @@
 }
 
 @mixin mobile-lg {
-  @media (min-width: 400px) {
+  @media (min-width: 300px) {
     @content;
   }
 }

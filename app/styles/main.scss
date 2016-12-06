@@ -101,12 +101,12 @@ body {
 //Front Page
 
 section.hero {
-  background:#fff;
+  background:lightblue;
   position: fixed;
   @include full-screen;
   padding:0;margin:0;
   z-index: -1;
-  @include background("../images/beach.jpg");
+  // @include background("../images/beach.jpg");
   a{
     width:45px;
     height:50px;
@@ -147,27 +147,27 @@ section.hero {
 }
 
 
-.button-back {
+.button {
   display: block;
-	height: 55px;
-	width: 100px;
+	height: 5em;
+	width: 15em;
   text-decoration: none;
-
-	/*Step 3: Text Styles*/
-	color: rgba(0, 0, 0, 0.55);
-	text-align: center;
+  text-align: center;
+  margin: 2em;
 }
 
 a:link {
   background-color: white;
-
+  text-decoration: none;
 }
+
 a:visited {
   background-color: white;
-
+  text-decoration: none;
 }
+
 a:hover {
-  background-color: #111119;
+  background-color: #0BA1E7;
   text-decoration: none;
   color: white;
 }
@@ -175,10 +175,67 @@ a:hover {
 //Main Page
 
 .content-container {
-  background-color: #95979b;
+  background-color: #fff;
+  width: 100vh;
 }
 
+.clearfix  {
+  overflow: auto;
+}
 
+.nav {
+  font-size: 2em;
+  position: relative;
+}
+
+#image-one {
+    position: relative;
+    width: 30%;
+    height: 20em;
+    overflow: hidden;
+    background: #aac9e2;
+    margin: 5em 5em 2.5em 5em;
+    float: left;
+}
+
+#image-two {
+  position: relative;
+  width: 50%;
+  height: 20em;
+
+        @include tablet {
+
+        }
+
+        @include desktop {
+          position: relative;
+          width: 30%;
+          height: 20em;
+          overflow: hidden;
+          background: #6ba1ce;
+          margin: 0em 5em 2.5em 5em;
+        }
+}
+
+#image-three {
+    position: relative;
+    width: 30%;
+    height: 20em;
+    background: black;
+    margin: 0em 5em 2.5em 5em;
+    float: right;
+
+}
+
+#image-four {
+    position: relative;
+    width: 30%;
+    height: 20em;
+    background: black;
+    margin: 0em 5em 2.5em 5em;
+    float: right;
+
+}
 
 // html {
 //   box-sizing: border-box;
