@@ -188,55 +188,101 @@ a:hover {
   position: relative;
 }
 
-#image-one {
-    position: relative;
-    width: 35%;
-    height: 20em;
-    overflow: hidden;
-    background: #aac9e2;
-    margin: 5em 5em 2.5em 5em;
-    float: left;
+.box {
+  width: 100%;
+  height: 10em;
+  background-color: pink;
+  margin: 2em;
+  padding: 1em;
+
+    @include desktop {
+      display: inline-block;
+      background: blue;
+      width: 15em;
+      height: 10em;
+      float: left;
+      margin: 20px;
+      color: white;
+    }
 }
 
-#image-two {
-  position: relative;
-  width: 35%;
-  height: 20em;
-  float: right;
+.box-long {
+      width: 100%;
+      height: 10em;
+      background-color: pink;
+      margin: 2em;
+      padding: 1em;
 
-        @include tablet {
-
-        }
-
-        @include desktop {
-          position: relative;
-          width: 35%;
-          height: 20em;
-          overflow: hidden;
-          background: #6ba1ce;
-          margin: 5em 2.5em 2.5em 0em;
-        }
+  @include desktop {
+      padding: 1em;
+      display: inline-block;
+      background: lightblue;
+      width: 15em;
+      height: 20em;
+      float: left;
+      margin: 20px;
+      color: white;
+    }
 }
 
-#image-three {
-    position: relative;
-    width: 30%;
-    height: 20em;
-    background: black;
-    margin: 0em 5em 2.5em 5em;
-    float: left;
 
-}
-
-#image-four {
-    position: relative;
-    width: 30%;
-    height: 20em;
-    background: black;
-    margin: 0em 5em 2.5em 5em;
-    float: right;
-
-}
+// #image-one {
+//     position: relative;
+//     width: 35%;
+//     height: 20em;
+//     overflow: hidden;
+//     background: yellow;
+//     margin: 5em 5em 2.5em 5em;
+//     float: left;
+//     vertical-align: top;
+//     display: block;
+// }
+//
+//
+// #image-two {
+//   position: relative;
+//   width: 100%;
+//   height: 20em;
+//   background-color: pink;
+//
+//         @include tablet {
+//         }
+//
+//         @include desktop {
+//           float: right;
+//           position: relative;
+//           width: 35%;
+//           height: 20em;
+//           overflow: hidden;
+//           background: #6ba1ce;
+//           margin: 0em 5em 2.5em 5em;
+//           display: inline-flex;
+//           float: right;
+//           font-size: 18px;
+//           line-height: 1.3em;
+//           // vertical-align: top;
+//           padding: 1em;
+//           // box-sizing: border-box;
+//           }
+//         }
+//
+// #image-three {
+//     position: relative;
+//     width: 35%;
+//     height: 20em;
+//     background: black;
+//     margin: 0em 5em 2.5em 5em;
+//     float: left;
+// }
+//
+// #image-four {
+//     position: relative;
+//     width: 35%;
+//     height: 20em;
+//     background: grey;
+//     margin: 0em 5em 2.5em 5em;
+//     float: right;
+// }
 
 // html {
 //   box-sizing: border-box;
