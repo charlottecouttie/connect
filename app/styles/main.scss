@@ -138,36 +138,35 @@ section.hero-two {
       }
     }
 
-
-
-.front {
-  position: absolute;
-  top: 2%;
-  left: 3%;
-  font-size: 3em;
-  font-family: 'Lato', sans-serif;
-  margin: 2em;
-
-    h1 {
-      font-size: 2em;
-      margin-bottom:0.5em;
-    }
-
-      @media (min-width: 1000px) {
-          top: 1%;
-          font-size: 2em;
-      }
-}
-
-
-// .button {
-//   display: block;
-// 	height: 5em;
-// 	width: 15em;
-//   text-decoration: none;
-//   text-align: center;
+// .front {
+//   position: absolute;
+//   top: 2%;
+//   left: 3%;
+//   font-size: 3em;
+//   font-family: 'Lato', sans-serif;
 //   margin: 2em;
+//
+//     h1 {
+//       font-size: 2em;
+//       margin-bottom:0.5em;
+//     }
+//
+//       @media (min-width: 1000px) {
+//           top: 1%;
+//           font-size: 2em;
+//       }
 // }
+
+
+.front-click {
+  display: block;
+	height: 5em;
+	width: 15em;
+  padding: 5em;
+  margin: auto;
+  background-color: white;
+  text-decoration: none;
+}
 
 a:link {
   background-color: white;
@@ -187,9 +186,24 @@ a:hover {
 
 //Main Page
 
+.main-container {
+  width: 100vh;
+  display: block;
+}
+
 .content-container {
   // background-color: #fff;
   width: 95%;
+}
+
+
+.button {
+  width: 30em;
+  height: 20em;
+  border: 3px solid white;
+  color: none;
+  text-decoration: none;
+  position: relative;
 }
 
 .clearfix  {
@@ -216,8 +230,6 @@ ul {
   margin: 0.5em 1em 1em 1em;
   padding: 1em;
 
-
-
     @include desktop {
       display: inline-block;
       background: blue;
@@ -227,11 +239,7 @@ ul {
       margin: 1em;
       color: white;
       padding: 1em;
-      a{
-        background-color: pink;
-      }
     }
-
 }
 
 .box-long {
