@@ -1,4 +1,6 @@
-@import "mixins.scss";
+
+@import "mixins";
+
 @import 'https://fonts.googleapis.com/css?family=Lato:300,400';
 
 
@@ -98,65 +100,33 @@ body {
   }
 }
 
+//TEMPLATE
+
+// .wrapper {
+//   .make-row();
+// }
+// .content-main {
+//   .make-lg-column(8);
+// }
+// .content-secondary {
+//   .make-lg-column(3);
+//   .make-lg-column-offset(1);
+// }
+
+.header {
+    position: relative;
+    display: grid;
+    font-size: 5em;
+}
+
+
 //Front Page
 
 section.hero {
   position: fixed;
   display: flex;
-  @include full-screen;
-  z-index: -1;
-
-  @include background("../images/beach.jpg");
-
-      img{
-        opacity:1;
-        width:100vh;
-        z-index: 9999;
-        @include desktop {
-
-        }
-      }
-    }
-
-
-
-section.hero-two {
-  background:black;
-  position: absolute;
-  @include full-screen;
-
-  z-index: -1;
-  @include background("../images/back.jpg");
-
-      img{
-        opacity:1;
-        width:35px;
-        z-index: 9999;
-        @include desktop {
-          width:50px;
-        }
-      }
-    }
-
-// .front {
-//   position: absolute;
-//   top: 2%;
-//   left: 3%;
-//   font-size: 3em;
-//   font-family: 'Lato', sans-serif;
-//   margin: 2em;
-//
-//     h1 {
-//       font-size: 2em;
-//       margin-bottom:0.5em;
-//     }
-//
-//       @media (min-width: 1000px) {
-//           top: 1%;
-//           font-size: 2em;
-//       }
-// }
-
+  background-color: #fffbd3;
+}
 
 .front-click {
   display: block;
@@ -164,7 +134,7 @@ section.hero-two {
 	width: 15em;
   padding: 5em;
   margin: auto;
-  background-color: white;
+  background-color: #fffbd3;
   text-decoration: none;
 }
 
@@ -186,16 +156,26 @@ a:hover {
 
 //Main Page
 
-.main-container {
-  width: 100vh;
-  display: block;
+.content-main {
+  margin: 1em;
+  top: 30%;
+  bottom: 10%;
+  font-size: 5em;
+  position: relative;
+  display: flex;
 }
 
-.content-container {
-  // background-color: #fff;
-  width: 95%;
+.content-secondary {
+  margin: 3em 6em;
+  border: 2px solid black;
+  padding: 1em;
+  text-align: center;
+  position: relative;
+  top: 80%;
+    a:hover {
+      background-color: #223ac1;
+    }
 }
-
 
 .button {
   width: 30em;
@@ -213,51 +193,35 @@ a:hover {
 .nav {
   font-size: 2em;
   position: relative;
-  background-color: black;
   display: inline-grid;
 }
 
 ul {
   list-style-type: none;
-  margin: 0;
+  margin: 0em 0em 0em 0.5em;
   padding: 0;
+  text-decoration: none;
+
+    @include desktop{
+      margin: 3em;
+    }
 }
 
 .box {
   width: 80%;
   height: 10em;
-  background-color: yellow;
+  background-color: #223ac1;
   margin: 0.5em 1em 1em 1em;
   padding: 1em;
 
     @include desktop {
       display: inline-block;
-      background: blue;
-      width: 15em;
+      background: grey;
+      width: 20em;
       height: 10em;
-      float: left;
       margin: 1em;
       color: white;
       padding: 1em;
-    }
-}
-
-.box-long {
-  width: 80%;
-  height: 10em;
-  background-color: yellow;
-  margin: 0em 0.5em 1em 1em;
-  padding: 1em;
-
-  @include desktop {
-      padding: 1em;
-      display: inline-block;
-      background: lightblue;
-      width: 15em;
-      height: 20em;
-      float: left;
-      margin: 1em;
-      color: white;
     }
 }
 
@@ -284,16 +248,7 @@ ul {
 //   text-align: center;
 // }
 
-//MEDIA QUERIES
 
-//
-// @media (min-width: 480px) {
-//
-// }
-//
-// @media (min-width: 768px) {
-//
-// }
 
 
 //lightbox

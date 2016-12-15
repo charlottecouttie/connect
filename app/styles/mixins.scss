@@ -3,9 +3,10 @@
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
-  -webkit-transform: translateY(-50%,-50%);
-  -ms-transform: translateY(-50%,-50%);
-  transform: translateY(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
 }
 
 @mixin w-h($width, $height) {
@@ -13,11 +14,13 @@
   height:$height;
 }
 
-@mixin transition($length){
-  transition: all $length ease;
-  -webkit-transition: all $length ease;
-  -moz-transition: all $length ease;
-  -ms-transition: all $length ease;
+@mixin prefix($property, $value, $vendors: webkit moz ms o) {
+    @if $vendors {
+      @each $vendor in $vendors {
+        #{"-" + $vendor + "-" + $property}: #{$value};
+      }
+    }
+    #{$property}: #{$value};
 }
 
 @mixin animation($name) {
@@ -27,22 +30,6 @@
   animation-direction: alternate;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
-}
-
-
-@mixin background($imgpath,$size:cover,$position:center,$repeat: no-repeat) {
-    background: {
-      image: url($imgpath);
-      size: $size;
-      position: $position;
-      repeat: $repeat;
-    }
-}
-
-
-@mixin full-screen{
-  width:100%;
-  height:100vh;
 }
 
 @mixin keyframes($name) {
@@ -58,7 +45,7 @@
 }
 
 @mixin mobile-lg {
-  @media (min-width: 300px) {
+  @media (min-width: 370px) {
     @content;
   }
 }
